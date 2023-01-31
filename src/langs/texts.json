@@ -24,9 +24,53 @@
         "en-en": "Calculate",
         "es-es": "Calcular"
     },
-    "calculateAlert": {
+    "calculate_alert": {
         "pt-br": "Preencha todos os campos!",
         "en-en": "Fill in all fields!",
         "es-es": "¡Complete todos los campos!"
+    },
+    "imc_text": {
+      "your_imc": {
+        "1": {
+          "pt-br": "Seu IMC é de",
+          "en-en": "Your BMI is",
+          "es-es": "Su IMC es"
+        },
+        "2": "kg/m²"
+      },
+      "imc_result": {
+        "1": {
+          "pt-br": "IMC está entre",
+          "en-en": "BMI is between ",
+          "es-es": "El IMC está entre"
+        },
+        "2": {
+          "pt-br": "e",
+          "en-en": "and ",
+          "es-es": "y"
+        }
+      }
+    },
+    "imc_levels": {
+      "1": {
+        "pt-br": "e",
+        "en-en": "and ",
+        "es-es": "y"
+      },
+      "2": {
+        "pt-br": "e",
+        "en-en": "and ",
+        "es-es": "y"
+      },
+      "3": {
+        "pt-br": "e",
+        "en-en": "and ",
+        "es-es": "y"
+      },
+      "4": {
+        "pt-br": "e",
+        "en-en": "and ",
+        "es-es": "y"
+      }
     }
   }

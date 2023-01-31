@@ -3,23 +3,23 @@ import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
 import leftArrowImage from "./assets/leftarrow.png"
 import * as langs from "./langs/texts.json";
-import { langsType } from "./types/Langs";
 import { levels, calculateImc, Level } from "./helpers/imc";
 import { GridItem } from "./components/GridItem";
+import { useLangs } from "./context/langsContext";
 
 const App = () => {
-  const [language, setLanguage] = React.useState('pt-br' as langsType);
   const [heightField, setHeightField] = React.useState<number>(0);
   const [weightField, setWeightField] = React.useState<number>(0);
   const [toShow, setToShow] = React.useState<Level | null>(null);
 
+  const { language, setLanguage } = useLangs();
   const texts = langs;
 
   const handleCalculateButton = () => {
     if (heightField && weightField) {
       setToShow(calculateImc(heightField, weightField));
     } else {
-      alert(`${texts.calculateAlert[language]}`)
+      alert(`${texts.calculate_alert[language]}`)
     }
   }
 
@@ -34,6 +34,11 @@ const App = () => {
       <header>
         <div className={styles.headerContainer}>
           <img src={poweredImage} alt="" width={150} />
+          <div className={styles.langsArea}>
+            <div onClick={() => setLanguage("pt-br")}>1</div>
+            <div onClick={() => setLanguage("en-en")}>2</div>
+            <div onClick={() => setLanguage("es-es")}>3</div>
+          </div>
         </div>
       </header>
       <div className={styles.container}>
