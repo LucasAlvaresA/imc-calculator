@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
 import leftArrowImage from "./assets/leftarrow.png"
+import brazilFlag from './assets/brazilflag.svg';
+import usaFlag from './assets/usaflag.svg';
+import spainFlag from './assets/spainflag.svg';
 import * as langs from "./langs/texts.json";
 import { levels, calculateImc, Level } from "./helpers/imc";
 import { GridItem } from "./components/GridItem";
@@ -35,9 +38,27 @@ const App = () => {
         <div className={styles.headerContainer}>
           <img src={poweredImage} alt="" width={150} />
           <div className={styles.langsArea}>
-            <div onClick={() => setLanguage("pt-br")}>1</div>
-            <div onClick={() => setLanguage("en-en")}>2</div>
-            <div onClick={() => setLanguage("es-es")}>3</div>
+            <div 
+              className={styles.langContainer} 
+              onClick={() => setLanguage("pt-br")}
+            >
+              <img src={brazilFlag} alt="" />
+              Português
+            </div>
+            <div 
+              className={styles.langContainer} 
+              onClick={() => setLanguage("en-en")}
+            >
+              <img src={usaFlag} alt="" />
+              English
+            </div>
+            <div 
+              className={styles.langContainer} 
+              onClick={() => setLanguage("es-es")}
+            >
+              <img src={spainFlag} alt="" />
+              Español
+            </div>
           </div>
         </div>
       </header>
