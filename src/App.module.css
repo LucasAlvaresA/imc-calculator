@@ -62,4 +62,21 @@ body {
 .container .rightSide {
   flex: 1;
   margin-left: 40px;
+  display: flex;
+}
+
+.container .rightSide .grid {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .rightSide .rightBig {
+  display: flex;
+  flex: 1;
+}
+
+.container .rightSide .rightArrow {
+ 
 }

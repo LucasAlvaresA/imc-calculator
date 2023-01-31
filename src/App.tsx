@@ -3,18 +3,20 @@ import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
 import * as langs from "./langs/texts.json";
 import { langsType } from "./types/Langs";
-import { levels, calculateImc } from "./helpers/imc";
+import { levels, calculateImc, Level } from "./helpers/imc";
+import { GridItem } from "./components/GridItem";
 
 const App = () => {
   const [language, setLanguage] = React.useState('pt-br' as langsType);
   const [heightField, setHeightField] = React.useState<number>(0);
   const [weightField, setWeightField] = React.useState<number>(0);
+  const [toShow, setToShow] = React.useState<Level | null>(null);
 
   const texts = langs;
 
   const handleCalculateButton = () => {
     if (heightField && weightField) {
-
+      setToShow(calculateImc(heightField, weightField));
     } else {
       alert(`${texts.calculateAlert[language]}`)
     }
@@ -48,7 +50,19 @@ const App = () => {
           <button onClick={handleCalculateButton}>{texts.calculate_button[language]}</button>
         </div>
         <div className={styles.rightSide}>
-          ...
+          {!toShow &&
+            <div className={styles.grid}>
+              {levels.map((item, key) => (
+                <GridItem key={key} item={item} />
+              ))}
+            </div>
+          }
+          {toShow &&
+            <div className={styles.rightBig}>
+              <div className={styles.rightArrow}></div>
+              <GridItem item={toShow} />
+            </div> 
+          }
         </div>
       </div>
     </div>
