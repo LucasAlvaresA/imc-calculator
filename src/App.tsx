@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
 import * as langs from "./langs/texts.json";
 import { langsType } from "./types/Langs";
+import { levels, calculateImc } from "./helpers/imc";
 
 const App = () => {
   const [language, setLanguage] = React.useState('pt-br' as langsType);
