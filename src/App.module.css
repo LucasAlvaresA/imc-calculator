@@ -4,6 +4,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.main {
+  padding-bottom: 50px;
+}
+
 .headerContainer {
   max-width: 900px;
   margin: 40px auto;
@@ -42,6 +46,10 @@ body {
   outline: 0;
 }
 
+.container .leftSide input:disabled {
+  opacity: .5;
+}
+
 .container .leftSide button {
   background-color: #227C9D;
   color: #FFF;
@@ -57,6 +65,10 @@ body {
 
 .container .leftSide button:hover {
   opacity: .8;
+}
+
+.container .leftSide button:disabled {
+  opacity: .5;
 }
 
 .container .rightSide {
@@ -78,5 +90,52 @@ body {
 }
 
 .container .rightSide .rightArrow {
- 
+  position: absolute;
+  background-color: #227C9D;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 145px;
+  transition: all ease .3s;
+}
+
+.container .rightSide .rightArrow:hover {
+  opacity: .8;
+}
+
+@media (max-width: 770px) {
+  header {
+    padding: 0 20px; 
+  }
+
+  .container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .container .leftSide {
+    margin-right: 0;
+  }
+
+  .container .rightSide {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .container .rightSide .rightArrow {
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
+import leftArrowImage from "./assets/leftarrow.png"
 import * as langs from "./langs/texts.json";
 import { langsType } from "./types/Langs";
 import { levels, calculateImc, Level } from "./helpers/imc";
@@ -22,6 +23,12 @@ const App = () => {
     }
   }
 
+  const handleBackButton = () => {
+    setToShow(null);
+    setHeightField(0);
+    setWeightField(0);
+  }
+
   return (
     <div className={styles.main}>
       <header>
@@ -39,15 +46,22 @@ const App = () => {
             placeholder={texts.placeholder_height[language]}
             value={heightField > 0 ? heightField : ""}
             onChange={e => setHeightField(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
           <input 
             type="number"
             placeholder={texts.placeholder_weight[language]}
             value={weightField > 0 ? weightField : ""}
             onChange={e => setWeightField(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
 
-          <button onClick={handleCalculateButton}>{texts.calculate_button[language]}</button>
+          <button 
+            onClick={handleCalculateButton}
+            disabled={toShow ? true : false}
+          >
+            {texts.calculate_button[language]}
+          </button>
         </div>
         <div className={styles.rightSide}>
           {!toShow &&
@@ -59,7 +73,9 @@ const App = () => {
           }
           {toShow &&
             <div className={styles.rightBig}>
-              <div className={styles.rightArrow}></div>
+              <div className={styles.rightArrow} onClick={handleBackButton}>
+                <img src={leftArrowImage} alt="" width={25} />
+              </div>
               <GridItem item={toShow} />
             </div> 
           }
