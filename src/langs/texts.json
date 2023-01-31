@@ -53,24 +53,20 @@
     },
     "imc_levels": {
       "1": {
-        "pt-br": "e",
-        "en-en": "and ",
-        "es-es": "y"
+        "pt-br": "Magreza",
+        "en-en": "Thinness",
+        "es-es": "Delgadez "
       },
-      "2": {
-        "pt-br": "e",
-        "en-en": "and ",
-        "es-es": "y"
-      },
+      "2": "Normal",
       "3": {
-        "pt-br": "e",
-        "en-en": "and ",
-        "es-es": "y"
+        "pt-br": "Sobrepeso",
+        "en-en": "Overweight",
+        "es-es": "Exceso de peso"
       },
       "4": {
-        "pt-br": "e",
-        "en-en": "and ",
-        "es-es": "y"
+        "pt-br": "Obesidade",
+        "en-en": "Obesity",
+        "es-es": "Obesidad"
       }
     }
   }
