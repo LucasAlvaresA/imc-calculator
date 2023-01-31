@@ -36,7 +36,9 @@ const App = () => {
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          <img src={poweredImage} alt="" width={150} />
+          <div className={styles.imgContainer}>
+            <img src={poweredImage} alt="" width={150} />
+          </div>
           <div className={styles.langsArea}>
             <div 
               className={styles.langContainer} 

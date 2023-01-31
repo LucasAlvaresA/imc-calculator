@@ -13,6 +13,33 @@ body {
   margin: 40px auto;
 }
 
+.langsArea {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.langContainer {
+  color: #3A4B5C;
+  background-color: #227C9D;
+  color: #FFF;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.langContainer:hover {
+  opacity: .8;
+}
+
 .container {
   display: flex;
   max-width: 900px;
@@ -137,5 +164,10 @@ body {
 @media (max-width: 430px) {
   .container .rightSide .grid {
     grid-template-columns: 1fr;
+  }
+
+  .langContainer {
+    width: 100px;
+    font-size: 12px;
   }
 }
