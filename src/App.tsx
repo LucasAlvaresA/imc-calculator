@@ -1,7 +1,24 @@
+import React from "react";
 import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png"
+import * as langs from "./langs/texts.json";
+import { langsType } from "./types/Langs";
 
 const App = () => {
+  const [language, setLanguage] = React.useState('pt-br' as langsType);
+  const [heightField, setHeightField] = React.useState<number>(0);
+  const [weightField, setWeightField] = React.useState<number>(0);
+
+  const texts = langs;
+
+  const handleCalculateButton = () => {
+    if (heightField && weightField) {
+
+    } else {
+      alert(`${texts.calculateAlert[language]}`)
+    }
+  }
+
   return (
     <div className={styles.main}>
       <header>
@@ -11,7 +28,23 @@ const App = () => {
       </header>
       <div className={styles.container}>
         <div className={styles.leftSide}>
-          ...
+          <h1>{texts.main_title[language]}</h1>
+          <p>{texts.main_text[language]}</p>
+
+          <input 
+            type="number"
+            placeholder={texts.placeholder_height[language]}
+            value={heightField > 0 ? heightField : ""}
+            onChange={e => setHeightField(parseFloat(e.target.value))}
+          />
+          <input 
+            type="number"
+            placeholder={texts.placeholder_weight[language]}
+            value={weightField > 0 ? weightField : ""}
+            onChange={e => setWeightField(parseFloat(e.target.value))}
+          />
+
+          <button onClick={handleCalculateButton}>{texts.calculate_button[language]}</button>
         </div>
         <div className={styles.rightSide}>
           ...

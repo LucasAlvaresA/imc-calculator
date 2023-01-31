@@ -1,0 +1,32 @@
+{
+    "main_title": {
+      "pt-br": "Calcule o seu IMC.",
+      "en-en": "Calculate your BMI.",
+      "es-es": "Calcula tu IMC."
+    },
+    "main_text": {
+        "pt-br": "IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso idela de cada pessoa.",
+        "en-en": "BMI is the acronym for Body Mass Index, a parameter adopted by the World Health Organization to calculate the ideal weight of each person.",
+        "es-es": "IMC son las siglas de índice de masa corporal, un parámetro adoptado por la Organización Mundial de la Salud para calcular el peso ideal de cada persona."
+      },
+    "placeholder_height": {
+        "pt-br": "Digite a sua altura. Ex 1.5 (em metros).",
+        "en-en": "Enter your height. Ex 1.5 (in meters).",
+        "es-es": "Introduce tu altura. Ej. 1,5 (en metros)."
+    },
+    "placeholder_weight": {
+        "pt-br": "Digite o seu peso. Ex 75.3 (em kilogramas).",
+        "en-en": "Enter your weight. Ex 75.3 (in kilograms).",
+        "es-es": "Introduzca su peso. X 75,3 (en kilogramos)."
+    },
+    "calculate_button": {
+        "pt-br": "Calcular",
+        "en-en": "Calculate",
+        "es-es": "Calcular"
+    },
+    "calculateAlert": {
+        "pt-br": "Preencha todos os campos!",
+        "en-en": "Fill in all fields!",
+        "es-es": "¡Complete todos los campos!"
+    }
+  }

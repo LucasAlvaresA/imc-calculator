@@ -1,0 +1,1 @@
+export type langsType = "pt-br" | "en-en" | "es-es";
